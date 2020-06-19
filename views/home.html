@@ -7,37 +7,119 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="./js/socket.io.js"></script>
     <script src="./js/jquery.min.js"></script>
-    <script src="./js/home.js"></script>
+
 </head>
 
 <body>
 
-    <div class="container ">
-        <div class="row mt-5 ">
-            <div class="col-sm-6">
-                <div class="btn btn-info btn-block nut1">Tragn web</div>
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-5">
+            <h1 class="h3 mb-0 text-gray-800">Điều khiển thiết bị thông minh</h1>
+        </div>
+
+        <!-- Content Row -->
+        <div class="row">
+
+
+            <div class="col-xl-6 col-md-6 mb-4">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-xl-9 col-md-6">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Phòng khách</div>
+                                <div class="input-group">
+                                    <input type="time" class="form-control">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button">Hẹn giờ</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 text-center">
+                                <i id="b1" class="fa fa-lightbulb-o fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-sm-6">
-                <input type="number" name="" id="input1">
+
+
+            <div class="col-xl-6 col-md-6 mb-4">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-xl-9 col-md-6">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Phòng khách</div>
+                                <div class="input-group">
+                                    <input type="time" class="form-control">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button">Hẹn giờ</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 text-center">
+                                <i id="b2" class="fa fa-lightbulb-o fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="col-xl-6 col-md-6 mb-4">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-xl-9 col-md-6">
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Phòng khách</div>
+                                <div class="input-group">
+                                    <input type="time" class="form-control">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button">Hẹn giờ</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 text-center">
+                                <i id="b3" class="fa fa-lightbulb-o fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-md-6 mb-4">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col-xl-9 col-md-6">
+                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Phòng khách</div>
+                                <div class="input-group">
+                                    <input type="time" class="form-control">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button">Hẹn giờ</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 text-center">
+                                <i id="b4" class="fa fa-lightbulb-o fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
 
 
         </div>
-        <div class="row mt-5">
-            <div class="col-sm-6">
-                <div class="btn btn-info btn-block nut2">ESP</div>
-            </div>
-            <div class="col-sm-6">
-                <input type="number" name="" id="input2">
-            </div>
 
 
-        </div>
     </div>
-
 </body>
+<script src="./js/home.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>

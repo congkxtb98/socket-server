@@ -13,15 +13,28 @@ app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname + '/views/home.html'));
 });
 
+
+let dataTong = { LED1: 1, LED2: 1, LED3: 1, LED4: 1 }
 //Tạo socket 
 io.on('connection', function (socket) {
-    console.log('Co 1 tin hieu conet vao client ');
+    console.log('1 trình duyệt vừa kết nối...');
+    console.log(dataTong)
 
-    socket.on('espSend', function (data) {
-        io.sockets.emit('severSendDataFromEspToClient', data);
+    io.sockets.emit("trinhDuyetConnect", dataTong);
+
+
+
+    socket.on('espSend', function () {
+        console.log('ESP đã vào..ư ư ư');
+        io.sockets.emit('LED1', dataTong);
+
     });
-    socket.on('clientSend', function (data) {
-        io.sockets.emit('severSendDataFromClientToEsp', data);
+    socket.on('LED', function (dataR) {
+        console.log('Yêu cầu tắt/bat bóng');
+        dataTong = dataR
+        console.log(dataTong);
+        io.sockets.emit('LED1', dataTong);
+
     });
 });
 
