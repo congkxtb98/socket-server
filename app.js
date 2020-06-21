@@ -1,11 +1,12 @@
-var path = require("path");
-var express = require("express");
-var app = express();
-var server = require('http').createServer(app);
-var io = require('socket.io')(server);
-var ip = require("ip")
-var PORT = 3000
-//Chỉ ra đường dẫn chứa css, js, images...
+let path = require("path");
+let express = require("express");
+let app = express();
+let server = require('http').createServer(app);
+let io = require('socket.io')(server);
+let ip = require("ip")
+let PORT = 3000
+let cron = require('cron');//Chỉ ra đường dẫn chứa css, js, images...
+const { time } = require("console");
 app.use(express.static(path.join(__dirname, 'public')));
 
 //Tạo router
@@ -34,6 +35,27 @@ io.on('connection', function (socket) {
         dataTong = dataR
         console.log(dataTong);
         io.sockets.emit('LED1', dataTong);
+
+    });
+    socket.on('HenGio', function (dataR) {
+        let timeH = dataR.time.split(":")[0],
+            timeM = dataR.time.split(":")[1];
+
+        let job = new cron.CronJob({
+            cronTime: `* ${timeM} ${timeH} * * *`,
+            onTick: function () {
+                dataTong = dataR.data;
+                console.log(`Vừa có tác vụ lúc ${dataR.time}`);
+                io.sockets.emit('LED1', dataTong);
+                io.sockets.emit("trinhDuyetConnect", dataTong);
+                job.stop()
+
+            },
+            start: true,
+            timeZone: 'Asia/Ho_Chi_Minh' // Lưu ý set lại time zone cho đúng 
+        });
+        job.start();
+        // io.sockets.emit('LED1', dataTong);
 
     });
 });

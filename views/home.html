@@ -3,7 +3,7 @@
 
 
 <head>
-    <title>home realtime NodeJS demo</title>
+    <title>:(</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
@@ -19,7 +19,7 @@
 
         <!-- Page Heading -->
         <div class="d-sm-flex align-items-center justify-content-between mb-4 mt-5">
-            <h1 class="h3 mb-0 text-gray-800">Điều khiển thiết bị thông minh</h1>
+            <h1 class="h3 mb-0 text-gray-800">Điều khiển thiết bị </h1>
         </div>
 
         <!-- Content Row -->
@@ -33,14 +33,15 @@
                             <div class="col-xl-9 col-md-6">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Phòng khách</div>
                                 <div class="input-group">
-                                    <input type="time" class="form-control">
+                                    <input id="settime1" type="time" class="form-control">
                                     <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button">Hẹn giờ</button>
+                                        <button id="btn-settime1" class="btn btn-outline-secondary" type="button">Hẹn
+                                            giờ</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6 text-center">
-                                <i id="b1" class="fa fa-lightbulb-o fa-2x text-gray-300"></i>
+                                <i id="b1" class="fa fa-lightbulb-o fa-2x text-gray-300" data-b1=""></i>
                             </div>
                         </div>
                     </div>
@@ -55,14 +56,15 @@
                             <div class="col-xl-9 col-md-6">
                                 <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Phòng khách</div>
                                 <div class="input-group">
-                                    <input type="time" class="form-control">
+                                    <input id="settime2" type="time" class="form-control">
                                     <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button">Hẹn giờ</button>
+                                        <button id="btn-settime2" class="btn btn-outline-secondary" type="button">Hẹn
+                                            giờ</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6 text-center">
-                                <i id="b2" class="fa fa-lightbulb-o fa-2x text-gray-300"></i>
+                                <i id="b2" class="fa fa-lightbulb-o fa-2x text-gray-300" data-b2=""></i>
                             </div>
                         </div>
                     </div>
@@ -76,14 +78,15 @@
                             <div class="col-xl-9 col-md-6">
                                 <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Phòng khách</div>
                                 <div class="input-group">
-                                    <input type="time" class="form-control">
+                                    <input id="settime3" type="time" class="form-control">
                                     <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button">Hẹn giờ</button>
+                                        <button id="btn-settime3" class="btn btn-outline-secondary" type="button">Hẹn
+                                            giờ</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6 text-center">
-                                <i id="b3" class="fa fa-lightbulb-o fa-2x text-gray-300"></i>
+                                <i id="b3" class="fa fa-lightbulb-o fa-2x text-gray-300" data-b3=""></i>
                             </div>
                         </div>
                     </div>
@@ -96,14 +99,15 @@
                             <div class="col-xl-9 col-md-6">
                                 <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Phòng khách</div>
                                 <div class="input-group">
-                                    <input type="time" class="form-control">
+                                    <input id="settime4" type="time" class="form-control">
                                     <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button">Hẹn giờ</button>
+                                        <button id="btn-settime4" class="btn btn-outline-secondary" type="button">Hẹn
+                                            giờ</button>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xl-3 col-md-6 text-center">
-                                <i id="b4" class="fa fa-lightbulb-o fa-2x text-gray-300"></i>
+                                <i id="b4" class="fa fa-lightbulb-o fa-2x text-gray-300" data-b4=""></i>
                             </div>
                         </div>
                     </div>
@@ -120,11 +124,17 @@
     </div>
 </body>
 <script src="./js/home.js"></script>
+
+<!-- Mở cmt để nhận niềm vui -->
+<!-- <script src="./js/onOff.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+<script>
+
+</script>
 
 </html>
