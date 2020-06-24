@@ -66,11 +66,8 @@ io.on('connection', function (socket) {
 
 // });
 //run
-server.listen(process.env.APP_PORT, process.env.APP_HOSTNAME, () => {
+server.listen(process.env.PORT, () => {
     console.log(
-        "Server Đã khởi chạy" +
-        process.env.APP_HOSTNAME +
-        ":" +
-        process.env.APP_PORT
+        "Server Đã khởi chạy"
     );
 });
