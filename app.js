@@ -67,6 +67,7 @@ io.on('connection', function (socket) {
 // });
 //run
 server.listen(process.env.PORT, () => {
+    console.log(new Date());
     console.log(
         "Server Đã khởi chạy"
     );
