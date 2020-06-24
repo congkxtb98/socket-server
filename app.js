@@ -19,7 +19,7 @@ let dataTong = { LED1: 1, LED2: 1, LED3: 1, LED4: 1 }
 //Tạo socket 
 io.on('connection', function (socket) {
     console.log('1 trình duyệt vừa kết nối...');
-    console.log(dataTong)
+    // console.log(dataTong)
 
     io.sockets.emit("trinhDuyetConnect", dataTong);
 
@@ -33,7 +33,7 @@ io.on('connection', function (socket) {
     socket.on('LED', function (dataR) {
         console.log('Yêu cầu tắt/bat bóng');
         dataTong = dataR
-        console.log(dataTong);
+        // console.log(dataTong);
         io.sockets.emit('LED1', dataTong);
 
     });
@@ -61,7 +61,16 @@ io.on('connection', function (socket) {
 });
 
 //Khởi tạo 1 server listen tại 1 port
-server.listen(3000, ip.address(), function () {
-    console.log(`server run o${ip.address()}:${3000} `);
+// server.listen(3000, ip.address(), function () {
+//     console.log(`server run o${ip.address()}:${3000} `);
 
+// });
+//run
+server.listen(process.env.APP_PORT, process.env.APP_HOSTNAME, () => {
+    console.log(
+        "Server Đã khởi chạy" +
+        process.env.APP_HOSTNAME +
+        ":" +
+        process.env.APP_PORT
+    );
 });
